@@ -1,8 +1,16 @@
+// to get elements
+const search = document.querySelector("#search-input");
+const form = document.getElementById("form");
+
+//to create instances of class
 const github = new Github();
 
-github.updatedName("fahriakbaba");
+//to submit form
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    github.updatedName(search.value);
+});
 
-// to get elements
-const searchInput = document.querySelector("#search-input");
-searchInput.type ="number";
-console.log(searchInput.type);
+
+
+ 
