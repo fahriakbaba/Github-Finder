@@ -1,0 +1,32 @@
+#show-profile {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+#profile-image {
+    min-width: 125px !important;
+    margin-right: auto !important;
+}
+
+@media (max-width: 1199px) {
+    #show-profile {        
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+}
+
+.repo-desc {
+    color: darkred; 
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.repo-desc:hover {
+    text-decoration: underline;
+}
+
+#profile-list {
+    font-size: .8rem;
+}

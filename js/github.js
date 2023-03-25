@@ -8,11 +8,13 @@ class Github {
         this.name = "";
     }
 
+    //to update user name
     updatedName(name) {
         this.name = name;
         this.getDataFromAPI()
     }
 
+    //to fetch data from URL
     async getDataFromAPI() {
         const res = await fetch(this.url + this.name);
         const data = await res.json();
