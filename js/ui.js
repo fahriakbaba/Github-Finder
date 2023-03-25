@@ -38,9 +38,13 @@ class UI {
 
   //to show repos
   showRepos(repos) {
+    let html = `<p class="fs-5 mt-2 mb-2">Latest Repos</p>`;
     console.log(repos.slice(0, 5));
+    if(!repos.length) {
+      html += "<p class='norepo'>There is no repo to show!</p>";
+    }
     repos.slice(0, 5).forEach(repo => {
-      this.repos.innerHTML += `
+      html += `
       <li class="list-group-item list-group-item-action mb-2 rounded d-flex justify-content-between align-items-center">
         <a href=${repo.html_url} target="_blank" class="repo-desc">${repo.description ? repo.description : "No specific repo name"}</a>
         <div class="group-badge">
@@ -51,6 +55,7 @@ class UI {
       </li>
           `;
     });
+    this.repos.innerHTML = html;
   }
 
 }

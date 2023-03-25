@@ -33,3 +33,10 @@
 #profile-list {
     font-size: .8rem;
 }
+
+.norepo {
+    color: rgba(139, 0, 0, .7);
+    font-size: .85rem;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
