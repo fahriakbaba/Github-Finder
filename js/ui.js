@@ -8,8 +8,8 @@ class UI {
   showProfile(profile) {
     console.log("profile: ", profile);
     this.profile.innerHTML = `
-      <div class="row border p-3 m-0 rounded">
-        <div class="w-25 " style="width: 15rem">
+      <div class="profile border p-3 m-0 rounded">
+        <div class="image-container" style="width: 15rem">
           <img
             id="profile-image"
             src=${profile.avatar_url}
@@ -20,7 +20,7 @@ class UI {
             <a href=${profile.html_url} target="_blank" class="btn btn-sm btn-primary w-100">View Profile</a>
           </div>
         </div>
-        <div class="left w-75 mt-4">
+        <div class="info-list mt-4">
           <div>
             <span class="badge bg-light text-dark">Following: ${profile.following}</span>
             <span class="badge bg-light text-dark">Followers: ${profile.followers}</span>
