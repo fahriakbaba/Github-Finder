@@ -46,11 +46,11 @@ class UI {
     repos.slice(0, 5).forEach(repo => {
       html += `
       <li class="list-group-item list-group-item-action mb-2 rounded d-flex justify-content-between align-items-center">
-        <a href=${repo.html_url} target="_blank" class="repo-desc">${repo.description ? repo.description : "No specific repo name"}</a>
+        <a href=${repo.html_url} target="_blank" class="repo-desc">${repo.description ? repo.description.slice(0,50) +"..." : "No specific repo name"}</a>
         <div class="group-badge">
-          <span class="badge bg-primary">Stars: 0</span>
-          <span class="badge bg-secondary">Watches: 0</span>
-          <span class="badge bg-success">Forks: 0</span>
+          <span class="badge bg-primary">Stars: ${repo.stargazers_count}</span>
+          <span class="badge bg-secondary">Watches: ${repo.watchers_count}</span>
+          <span class="badge bg-success">Forks: ${repo.forks_count}</span>
         </div>
       </li>
           `;
