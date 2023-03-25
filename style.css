@@ -21,10 +21,13 @@
     color: darkred; 
     cursor: pointer;
     font-weight: 600;
+    font-size: .85rem;
+    transition: all .7s;
 }
 
 .repo-desc:hover {
     text-decoration: underline;
+    opacity: 1;
 }
 
 #profile-list {

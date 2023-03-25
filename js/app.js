@@ -11,6 +11,9 @@ form.addEventListener("submit", async(e) => {
 
     //to get data from URL
     github.updatedName(search.value);
+
+    //to clear user name
+    search.value = "";
 });
 
 

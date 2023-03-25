@@ -42,7 +42,7 @@ class UI {
     repos.slice(0, 5).forEach(repo => {
       this.repos.innerHTML += `
       <li class="list-group-item list-group-item-action mb-2 rounded d-flex justify-content-between align-items-center">
-        <span class="repo-desc">${repo.description ? repo.description : "No specific repo name"}</span>
+        <a href=${repo.html_url} target="_blank" class="repo-desc">${repo.description ? repo.description : "No specific repo name"}</a>
         <div class="group-badge">
           <span class="badge bg-primary">Stars: 0</span>
           <span class="badge bg-secondary">Watches: 0</span>
