@@ -18,18 +18,22 @@ class Github {
     async getDataFromAPI() {
         const res = await fetch(this.url + this.name);
         const data = await res.json();
+        const resRepos = await fetch(this.url + this.name + "/repos");
+        const dataRepos = await resRepos.json(); 
+
         if (res.ok === true) {
             ui.showProfile(data);
         } else {
             console.log({message: data.message, url: data.documentation_url});
         }
-    
-        const resRepos = await fetch(this.url + this.name + "/repos");
-        const dataRepos = await resRepos.json(); 
+        
         if (resRepos.ok === true) {       
             ui.showRepos(dataRepos);
         } else {
             console.log({message: dataRepos.message, url: dataRepos.documentation_url});
         }
+
+        //to finish loading effect
+        document.querySelector(".loading").style.display = "none";
     }
 }

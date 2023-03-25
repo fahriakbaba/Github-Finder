@@ -1,9 +1,14 @@
+/* profile section */
 .profile {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+}
+
+#profile-list {
+    font-size: .8rem;
 }
 
 .info-list {
@@ -15,6 +20,37 @@
     margin-right: auto !important;
 }
 
+
+/* repo section */
+.repo-desc {
+    color: darkred; 
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .85rem;
+    transition: all .7s;
+}
+
+.repo-desc:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.norepo {
+    color: rgba(139, 0, 0, .7);
+    font-size: .85rem;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+/* loading in CSS */
+.loading {
+    display: none;
+    color: rgba(139, 0, 0, .7);
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+/* media tag for responsive */
 @media (max-width: 768px) {
     #profile-image {
         min-width: 50px;
@@ -32,28 +68,4 @@
         align-items: center;
         gap: 1rem;
     }
-}
-
-.repo-desc {
-    color: darkred; 
-    cursor: pointer;
-    font-weight: 600;
-    font-size: .85rem;
-    transition: all .7s;
-}
-
-.repo-desc:hover {
-    text-decoration: underline;
-    opacity: 1;
-}
-
-#profile-list {
-    font-size: .8rem;
-}
-
-.norepo {
-    color: rgba(139, 0, 0, .7);
-    font-size: .85rem;
-    font-weight: bold;
-    letter-spacing: .5px;
 }

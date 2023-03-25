@@ -9,10 +9,17 @@ const github = new Github();
 form.addEventListener("submit", async(e) => {
     e.preventDefault();
 
+    // to start loading effect
+    document.querySelector(".loading").style.display = "block";
+
+    //to clean repos and profile section content
+    ui.profile.innerHTML ="";
+    ui.repos.innerHTML = "";
+
     //to get data from URL
     github.updatedName(search.value);
 
-    //to clear user name
+    //to clean user name
     search.value = "";
 });
 
