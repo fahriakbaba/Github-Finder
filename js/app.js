@@ -6,8 +6,10 @@ const form = document.getElementById("form");
 const github = new Github();
 
 //to submit form
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async(e) => {
     e.preventDefault();
+
+    //to get data from URL
     github.updatedName(search.value);
 });
 
