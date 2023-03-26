@@ -7,7 +7,7 @@
     <li>CSS3</li>
     <li>Bootstrap</li>
     <li>OOP and DOM in JavaScript</li>
-    <li>Higher Order Function including forEaxh method.</li>
+    <li>Higher Order Function including forEach method.</li>
 </ul>
 
 <p>You can access live demo of <a href="https://fahriakbaba-github-finder.netlify.app/" target="_blank">this project</a>.</p>
