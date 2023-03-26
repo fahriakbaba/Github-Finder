@@ -9,7 +9,10 @@ const github = new Github();
 form.addEventListener("submit", async(e) => {
     e.preventDefault();
 
-    // to start loading effect
+    //to clean error message
+    document.querySelector(".error").style.display = "none";
+
+    //to start loading effect
     document.querySelector(".loading").style.display = "block";
 
     //to clean repos and profile section content

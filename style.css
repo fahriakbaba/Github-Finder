@@ -50,6 +50,14 @@
     font-weight: 600;
 }
 
+/* error message */
+.error {
+    display: none;
+    color: rgba(139, 0, 0, .7);
+    font-size: .85rem;
+    font-weight: 600;
+}
+
 /* media tag for responsive */
 @media (max-width: 768px) {
     #profile-image {

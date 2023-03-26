@@ -1,3 +1,7 @@
+//to get elements
+const loading = document.querySelector(".loading");
+const errorMessage = document.querySelector(".error");
+
 //to create instances of UI
 const ui = new UI();
 
@@ -25,6 +29,8 @@ class Github {
             ui.showProfile(data);
         } else {
             console.log({message: data.message, url: data.documentation_url});
+            errorMessage.innerText = data.message;
+            errorMessage.style.display = "block";
         }
         
         if (resRepos.ok === true) {       
@@ -34,6 +40,6 @@ class Github {
         }
 
         //to finish loading effect
-        document.querySelector(".loading").style.display = "none";
+        loading.style.display = "none";
     }
 }
